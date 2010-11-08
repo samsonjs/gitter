@@ -1,7 +1,7 @@
 gitter
 ======
 
-A GitHub client inspired by pengwynn/octopussy.
+A GitHub client inspired by [pengwynn/octopussy](/pengwynn/octopussy).
 
 v2 API
 
