@@ -1,6 +1,6 @@
 { "name" : "gitter"
 , "description" : "GitHub client (API v2), inspired by pengwynn/octopussy"
-, "version" : "0.0.1"
+, "version" : "0.0.2"
 , "homepage" : "http://samhuri.net/node/gitter"
 , "author" : "Sami Samhuri <sami.samhuri@gmail.com>"
 , "repository" :
