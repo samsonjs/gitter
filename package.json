@@ -1,7 +1,7 @@
 { "name" : "gitter"
 , "description" : "GitHub client (API v2), inspired by pengwynn/octopussy"
-, "version" : "0.0.2"
-, "homepage" : "http://samhuri.net/node/gitter"
+, "version" : "0.0.3"
+, "homepage" : "http://samhuri.net/proj/gitter"
 , "author" : "Sami Samhuri <sami.samhuri@gmail.com>"
 , "repository" :
   { "type" : "git"
@@ -19,7 +19,8 @@
     , "url" : "http://github.com/samsonjs/gitter/raw/master/LICENSE"
     }
   ]
-, "dependencies" : { "request" : "0.10.0 - 0.10.999"
-                   , "vows" : "0.5.0 - 0.5.999"
-                   }
+, "dependencies" :
+  { "request" : "0.10.0 - 0.10.999"
+  , "vows" : "0.5.0 - 0.5.999"
+  }
 }
