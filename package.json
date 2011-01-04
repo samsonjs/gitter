@@ -5,7 +5,7 @@
 , "author" : "Sami Samhuri <sami.samhuri@gmail.com>"
 , "repository" :
   { "type" : "git"
-  , "url" : "http://github.com/samsonjs/gitter.git"
+  , "url" : "https://github.com/samsonjs/gitter"
   }
 , "bugs" :
   { "mail" : "sami.samhuri+gitter@gmail.com"
