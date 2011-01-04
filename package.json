@@ -1,6 +1,6 @@
 { "name" : "gitter"
 , "description" : "GitHub client (API v2)"
-, "version" : "0.1.0"
+, "version" : "0.1.1"
 , "homepage" : "http://samhuri.net/proj/gitter"
 , "author" : "Sami Samhuri <sami.samhuri@gmail.com>"
 , "repository" :
@@ -19,8 +19,6 @@
     , "url" : "http://github.com/samsonjs/gitter/raw/master/LICENSE"
     }
   ]
-, "dependencies" :
-  { "request" : "0.10.0 - 0.10.999"
-  , "vows" : "0.5.0 - 0.5.999"
-  }
+, "dependencies" : { "request" : "0.10.0 - 0.10.999" }
+, "devDependencies" : { "vows" : "0.5.0 - 0.5.999" }
 }
