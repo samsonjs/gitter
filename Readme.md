@@ -1,9 +1,11 @@
 gitter
 ======
 
-A GitHub client inspired by [pengwynn/octopussy](/pengwynn/octopussy).
+A GitHub client inspired by [pengwynn/octokit](https://github.com/pengwynn/octokit).
 
-v2 API
+v3 API
+
+Works in Node.js and most web browsers.
 
 
 Installation
@@ -22,31 +24,31 @@ Usage
       console.dir(user)
     })
 
-    gh.repo('samsonjs/gitter', function(err, repo) {
+    gh.repo('samsonjs', 'gitter', function(err, repo) {
       if (err) throw err
       console.log('---- repo: ' + repo.owner + '/' + repo.name + ' ----')
       console.dir(repo)
-    }).getWatchers(function(err, repos) {
+    }).fetchWatchers(function(err, watchers) {
       if (err) throw err
       console.log('---- watchers ----')
-      console.dir(repos)
-    }).getBranches(function(err, branches) {
+      console.dir(watchers)
+    }).fetchBranches(function(err, branches) {
       if (err) throw err
       console.log('---- branches: samsonjs/gitter ----')
       console.dir(branches)
-      gh.commit(this.repo, branches['master'], function(err, commit) {
+      gh.commit(this.user, this.repo, branches['master'], function(err, commit) {
         if (err) throw err
         console.log('---- samsonjs/gitter/master commit: ' + commit.id + ' ----')
         console.dir(commit.data())
       })
     })
 
-For the full API have a look at the top of [lib/index.js](/samsonjs/gitter/blob/master/lib/index.js).
+For the full API have a look at the top of [lib/index.js](https://github.com/samsonjs/gitter/blob/master/lib/index.js).
 
 
 License
 =======
 
-Copyright 2010 Sami Samhuri sami.samhuri@gmail.com
+Copyright 2010 - 2012 Sami Samhuri sami@samhuri.net
 
-MIT (see included [LICENSE](/samsonjs/gitter/blob/master/LICENSE))
+[MIT License](http://sjs.mit-license.org)

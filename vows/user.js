@@ -1,4 +1,4 @@
-var gh = require('../lib')
+var gh = require('../')
   , vows = require('vows')
   , assert = require('assert')
   , h = require('./helper')
@@ -8,18 +8,9 @@ var gh = require('../lib')
 vows.describe('User').addBatch({
     'after fetching a user': {
         topic: function() { gh.user(User, this.callback) },
-        'the data object can be accessed with the data() method': function(err, user) {
-            assert.ifError(err)
-            assert.ok(user)
-            assert.instanceOf(user.data(), Object)
-        },
-        'attributes can be accessed with the data() method': function(err, user) {
-            assert.ifError(err)
-            assert.equal(user.data('login'), User)
-        },
         'expected fields are present': function(err, user) {
             assert.ifError(err)
-            assert.ok(h.looksLikeAUser(user.data()))
+            assert.ok(h.looksLikeAUser(user))
         },
     },
     'after fetching their followers': {
@@ -30,7 +21,7 @@ vows.describe('User').addBatch({
         },
         'usernames of followers are available': function(err, followers) {
             assert.ifError(err)
-            assert.ok(followers.every(function(f) { return f && f.length > 1 }))
+            assert.ok(followers.every(h.looksLikeAFollower))
         }
     },
     'after fetching users they follow': {
@@ -41,7 +32,7 @@ vows.describe('User').addBatch({
         },
         'names of following users are available': function(err, following) {
             assert.ifError(err)
-            assert.ok(following.every(function(f) { return f && f.length > 1 }))
+            assert.ok(following.every(h.looksLikeAFollower))
         }
     },
     'after fetching their public repos': {

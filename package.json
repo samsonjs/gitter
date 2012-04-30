@@ -1,24 +1,23 @@
 { "name" : "gitter"
-, "description" : "GitHub client (API v2)"
-, "version" : "0.1.2"
+, "description" : "GitHub client (API v3)"
+, "version" : "0.2.0"
 , "homepage" : "http://samhuri.net/proj/gitter"
-, "author" : "Sami Samhuri <sami.samhuri@gmail.com>"
+, "author" : "Sami Samhuri <sami@samhuri.net>"
 , "repository" :
   { "type" : "git"
   , "url" : "https://github.com/samsonjs/gitter"
   }
 , "bugs" :
-  { "mail" : "sami.samhuri+gitter@gmail.com"
-  , "web" : "http://github.com/samsonjs/gitter/issues"
+  { "mail" : "sami@samhuri.net"
+  , "url" : "http://github.com/samsonjs/gitter/issues"
   }
 , "directories" : { "lib" : "./lib" }
 , "main" : "./lib/index"
-, "engines" : { "node" : ">=0.3.0" }
+, "engines" : { "node" : ">=0.6.0" }
 , "licenses" :
   [ { "type" : "MIT"
-    , "url" : "http://github.com/samsonjs/gitter/raw/master/LICENSE"
+    , "url" : "http://sjs.mit-license.org"
     }
   ]
-, "dependencies" : { "request" : "0.10.0 - 0.10.999" }
-, "devDependencies" : { "vows" : "0.5.0 - 0.5.999" }
+, "devDependencies" : { "vows" : "0.6.2" }
 }
